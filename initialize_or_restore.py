@@ -115,10 +115,10 @@ def fifth_model():
   and tf.constant_initializer(4) in line (a), initialized x to 3 in line (b),
   restored y to 2 in line (c), yielding values 3 and 2 in line (d).
   """
-  with tf.Graph().as_default() as G4:
+  with tf.Graph().as_default() as G5:
     model(3, 4)  # (a)
     with tf.Session() as sess:
-      z_op = G4.get_tensor_by_name("a/z:0")
+      z_op = G5.get_tensor_by_name("a/z:0")
       var_list = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope="a/x")
       sess.run(tf.variables_initializer(var_list=var_list))  # line (b)
       var_list = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope="a/y")
