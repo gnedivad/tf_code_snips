@@ -4,7 +4,7 @@ import tensorflow as tf
 FLAGS = tf.app.flags.FLAGS
 
 tf.app.flags.DEFINE_string(
-  "checkpoint_dir", "checkpoints", """Directory for checkpoints.""")
+  "checkpoint_dir", "checkpoints/initialize_or_restore", """Directory for checkpoints.""")
 
 ###############################################################################
 # Does variable initialization overwrite variables read from checkpoints?     #

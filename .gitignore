@@ -1,2 +1,3 @@
-checkpoints/*
-!checkpoints/.gitkeep
+.DS_Store
+checkpoints/*/*
+!checkpoints/*/.gitkeep
